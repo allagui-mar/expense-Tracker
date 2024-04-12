@@ -1,12 +1,6 @@
 const getFormattedDate = (date) => {
-  try {
-    return date.toISOString().slice(0, 10);
-  } catch (error) {
-    console.error("Error formatting date:", error);
-    return "Invalid date";
-  }
+  return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
 };
-
 export default getFormattedDate;
 
 export const getDateMinusDays = (date, days) => {
